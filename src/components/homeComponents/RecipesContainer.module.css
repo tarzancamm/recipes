@@ -1,0 +1,23 @@
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    border: none;
+    background-color: rgb(255, 203, 107);
+    border-radius: 25px;
+    width: 350px;
+    height: 35px;
+    padding-left: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.search input {
+    font-size: 1rem;
+}

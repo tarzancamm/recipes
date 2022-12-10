@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background-color: rgb(78, 77, 77);
+}
+
+.title {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    margin-left: 6rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 4rem;
+    margin-top: .8rem;
+    width: 90%;
+}
+
+.social {
+    background-color: rgb(68, 151, 151);
+    padding: 13px;
+    border-radius: 50%;
+}
+
+.svg {
+    margin-right: 6rem;
+}
