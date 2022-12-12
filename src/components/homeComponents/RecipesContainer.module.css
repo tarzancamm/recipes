@@ -1,8 +1,8 @@
 .search {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 input {
@@ -20,4 +20,16 @@ input:focus {
 
 .search input {
     font-size: 1rem;
+}
+
+.recipe_display {
+    height: 700px;
+}
+
+.recipes_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
 }

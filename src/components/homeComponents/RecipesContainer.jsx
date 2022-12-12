@@ -1,9 +1,9 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 import RecipeCard from "./RecipeCard";
 import styles from "./RecipesContainer.module.css";
 
 const RecipesContainer = (props) => {
-  const [searchedRecipe, setSearchedRecipe] = useState();
+  const [searchedRecipe, setSearchedRecipe] = useState('');
 
   const displayRecipes = props.recipes
     .filter((recipe) => {
@@ -20,7 +20,7 @@ const RecipesContainer = (props) => {
   };
 
   return (
-    <Fragment>
+    <div className={styles.recipe_display}>
       <div className={styles.search}>
         <input
           type="text"
@@ -29,10 +29,10 @@ const RecipesContainer = (props) => {
           placeholder="Search for a recipe"
         />
       </div>
-      <div>
+      <div className={styles.recipes_list}>
         {displayRecipes ? displayRecipes : <h3>No Recipes to Display</h3>}
       </div>
-    </Fragment>
+    </div>
   );
 };
 

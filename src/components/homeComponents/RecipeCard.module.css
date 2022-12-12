@@ -1,12 +1,12 @@
 .recipe-container {
-    width: 400px;
+    width: 300px;
     height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 2px lightgrey solid;
+    border: 1px lightgrey solid;
     box-shadow: 3px 3px 3px lightgrey;
 }
 

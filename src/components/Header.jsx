@@ -7,7 +7,7 @@ const Header = () => {
     <header className={styles.header}>
       <h2 className={styles['header-title']}>Devmountain Eatery</h2>
       <nav className={styles['header-title__items']}>
-        <Link to="">
+        <Link to="/">
           <button>Home</button>
         </Link>
         <Link to="/newRecipe">
