@@ -19,16 +19,35 @@ const NewRecipeScreen = () => {
     instructions: "",
   };
 
-  const onSubmit = (values) => {
-    values.ingredients = ingredients;
-    console.log(values);
-  };
-
   const addIngredient = () => {
     setIngredients([...ingredients, { name, quantity }]);
     setName("");
     setQuantity("");
   };
+
+  const onSubmit = (values) => {
+    values.ingredients = ingredients;
+    axios
+      .post(`https://recipes.devmountain.com/recipes`, values)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+  };
+
+  // async function addRecipe(values) {
+  //   const response = await fetch(`https://recipes.devmountain.com/recipes`, {
+  //     method: "POST",
+  //     body: JSON.stringify(values),
+  //     headers: {
+  //       "CONTENT-TYPE": "recipe/JSON",
+  //     },
+  //   });
+  //   const data = await response.json();
+  //   console.log(data);
+  // }
 
   const ingredientDisplay = ingredients.map((ingredient) => {
     return (
@@ -37,26 +56,6 @@ const NewRecipeScreen = () => {
       </li>
     );
   });
-
-  // const addRecipe = (values) => {
-  //   axios
-  //     .post(`https://recipes.devmountain.com/recipes`, values)
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     });
-  // };
-
-  async function addRecipe(values) {
-    const response = await fetch(`https://recipes.devmountain.com/recipes`, {
-      method: "POST",
-      body: JSON.stringify(values),
-      headers: {
-        "CONTENT-TYPE": "recipe/JSON",
-      },
-    });
-    const data = await response.json();
-    console.log(data);
-  }
 
   return (
     <section className={styles.mainsection}>
@@ -166,7 +165,7 @@ const NewRecipeScreen = () => {
               onChange={handleChange}
               name="instructions"
             />
-            <button type="button" className={styles.button} onClick={addRecipe}>
+            <button type="submit" className={styles.button}>
               Save
             </button>
           </form>

@@ -21,6 +21,7 @@ const DetailScreen = () => {
         style={{
           backgroundSize: "cover",
           background: `url(${recipe.image_url})`,
+          backgroundPosition: 'center',
         }}
       >
         <div className={styles.recipe_name}>{recipe.recipe_name}</div>
